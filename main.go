@@ -2,9 +2,14 @@ package main
 
 import (
 	"fmt"
+	"io/ioutil"
 	"os"
 	"os/exec"
-)// Creating main file to be executed when running `docker run image <command> <parameters>
+	"path/filepath"
+	"strconv"
+	"syscall"
+)
+// Creating main file to be executed when running `docker run image <command> <parameters>
 
 func main () {
   switch os.args[1] {
