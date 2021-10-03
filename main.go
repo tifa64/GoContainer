@@ -11,13 +11,15 @@ import (
 )
 // Creating main file to be executed when running `docker run image <command> <parameters>
 
-func main () {
-  switch os.args[1] {
-    case "run":
-      run ()
-    default:
-      panic("command not found")
-  }
+func main() {
+	switch os.Args[1] {
+	case "run":
+		run()
+	case "child":
+		child()
+	default:
+		panic("help")
+	}
 }
 
 func run() {
